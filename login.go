@@ -5,6 +5,9 @@ import (
 	"os"
 )
 
+const usage = "Usage : [username] [password]"
+const useErr = "You need to enter your first name %q"
+
 func main() {
 	args := os.Args
 
@@ -12,12 +15,12 @@ func main() {
 	//	var password := Password
 
 	if len(args) != 3 {
-		fmt.Println("You need to enter a user and a password")
+		fmt.Println(usage)
 		return
 	}
 	u, p := args[1], args[2]
 	if u != "Jason" {
-		fmt.Printf("user %q not found in database. ", u)
+		fmt.Printf(useErr, u)
 	} else if p != "Password" {
 		fmt.Println("Password does not match")
 	} else {
