@@ -1,15 +1,15 @@
 package main
 
-
 import (
 	"fmt"
-	"time"
+	"syscall"
 )
 
 func main() {
 
-	t := time.Now()
+	env := syscall.Environ()
 
-	fmt.Println(t)
+	for i := range env {
+		fmt.Println(env[i])
+	}
 }
-
