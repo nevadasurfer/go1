@@ -17,7 +17,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: ./linkidgo1
+        working-directory: ./linkindgo1
 
     permissions:
       checks: write
